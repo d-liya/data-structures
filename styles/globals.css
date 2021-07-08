@@ -1,9 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap");
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: "Nunito", sans-serif;
+  background-color: var(--tint-black);
 }
 
 a {
@@ -13,4 +14,99 @@ a {
 
 * {
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  --purple: rgb(94, 92, 230);
+  --tint-purple: rgb(88, 86, 214);
+  --black: rgb(44, 44, 46);
+  --black2: rgb(58, 58, 60);
+  --tint-black: rgb(28, 28, 30);
+  --white-darker: rgb(209, 209, 214);
+}
+
+.text-p {
+  color: var(--purple);
+}
+
+nav {
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.link-btn {
+  border: 1px solid var(--purple);
+  background-color: var(--purple);
+  color: white;
+  padding: 8px;
+  border-radius: 0.5rem;
+}
+.link-btn:hover {
+  background-color: var(--tint-purple);
+}
+.editor {
+  background-color: var(--black);
+  height: 85vh;
+  margin: 10px 5%;
+  border-radius: 1rem;
+  display: flex;
+  position: relative;
+}
+
+.explorer-tab {
+  width: 100%;
+  padding-top: 10px;
+}
+
+.tab-header {
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+  display: flex;
+  font-size: 0.8rem;
+  color: var(--white-darker);
+  padding: 8px 10px;
+  font-weight: 700;
+}
+
+.explorer-tab input {
+  list-style: none;
+  display: flex;
+  font-size: 0.8rem;
+  color: var(--white-darker);
+  background-color: var(--black);
+  border: none;
+  padding: 8px;
+  font-weight: 700;
+  outline: none;
+}
+.explorer-tab input:hover {
+  background-color: var(--tint-black);
+  color: white;
+}
+.file-explorer-side-bar {
+  background-color: var(--black);
+  display: flex;
+  height: 100%;
+}
+.text-editor {
+  width: 50%;
+  position: absolute;
+  height: 100%;
+}
+
+.text-editor textarea {
+  height: 100%;
+  background-color: var(--tint-black);
+  border-color: var(--tint-black);
+  color: white;
+  padding: 10px;
+  margin-left: 1px;
+  outline: none;
+  width: 100%;
+  resize: none;
+}
+.preview {
+  width: 50%;
 }
