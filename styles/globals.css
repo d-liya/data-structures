@@ -1,4 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 html,
 body {
   padding: 0;
@@ -26,13 +29,6 @@ a {
 
 .text-p {
   color: var(--purple);
-}
-
-nav {
-  padding: 15px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 
 .link-btn {
@@ -92,7 +88,6 @@ nav {
 }
 .text-editor {
   width: 50%;
-  position: absolute;
   height: 100%;
 }
 

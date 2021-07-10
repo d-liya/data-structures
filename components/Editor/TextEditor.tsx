@@ -7,7 +7,7 @@ import playPause from "react-useanimations/lib/playPause";
 export default function TextEditor() {
   const editor = useAppSelector((state) => state.editor);
   const dispatch = useAppDispatch();
-  const style = useSpring({ x: editor.openTab ? 239 : 50 });
+  const style = useSpring({ width: editor.openTab ? 300 : 350 });
   return (
     <animated.div style={style} className="text-editor">
       <UseAnimations

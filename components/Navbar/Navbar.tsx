@@ -1,12 +1,10 @@
-import Link from "next/link";
+import { LinkButton } from "../common/Button";
 
 export default function Navbar() {
   return (
-    <nav>
-      <h2 className="text-p">Data Structures</h2>
-      <Link href="/documentation">
-        <a className="link-btn">Documentation</a>
-      </Link>
+    <nav className="flex justify-between items-center p-5">
+      <h2 className="text-purple text-2xl">Data Structures</h2>
+      <LinkButton href="/documentation" text="Documentation" />
     </nav>
   );
 }
