@@ -1,27 +1,27 @@
 import { AiFillFileAdd, AiOutlinePlus } from "react-icons/ai";
+import { useSpring, animated } from "react-spring";
 import { useAppDispatch, useAppSelector } from "../../redux/hooks";
+import { FileNameInput } from "../common/Input";
 
 export default function FileExplorerTab() {
   const editor = useAppSelector((state) => state.editor);
   const dispatch = useAppDispatch();
+  const styles = useSpring({
+    width: editor.openTab ? 200 : 0,
+    opacity: editor.openTab ? 1 : 0,
+  });
 
   return (
-    <>
-      <ul className="explorer-tab">
-        <span className="tab-header">
-          <span>
-            <AiFillFileAdd style={{ marginRight: 10 }} /> New File
-          </span>{" "}
-          <AiOutlinePlus style={{ cursor: "pointer" }} />
-        </span>
-        {editor.files.length > 0 && editor.files.map((el) => <input value={el} key={el} />)}
-        <input value="LinkedList Example" disabled />
-        <input value="DoublyLinkedList Example" disabled />
-        <input value="BinaryTree Example" disabled />
-        <input value="BinarySearchTree Example" disabled />
-        <input value="Stack Example" disabled />
-        <input value="Queue Example" disabled />
-      </ul>
-    </>
+    <animated.ul className="mt-3" style={styles}>
+      <span className="text-white text-sm m-1 p-1">Examples</span>
+      <section className="flex flex-col">
+        <FileNameInput value="LinkedList Example" disabled />
+        <FileNameInput value="DoublyLinkedList Example" disabled />
+        <FileNameInput value="BinaryTree Example" disabled />
+        <FileNameInput value="BinarySearchTree Example" disabled />
+        <FileNameInput value="Stack Example" disabled />
+        <FileNameInput value="Queue Example" disabled />
+      </section>
+    </animated.ul>
   );
 }

@@ -8,6 +8,8 @@ module.exports = {
       black: "rgb(44, 44, 46)",
       tintBlack: "rgb(28, 28, 30)",
       white: "rgb(255,255,255)",
+      tintWhite: "rgb(209, 209, 214)",
+      red: "rgb(255,69,58)",
     },
     extend: {},
   },

@@ -4,7 +4,7 @@ import Navbar from "../components/Navbar/Navbar";
 
 export default function Home() {
   return (
-    <div>
+    <div className="flex flex-col h-screen">
       <Navbar />
       <Editor />
     </div>
