@@ -11,7 +11,15 @@ import { Stack } from "../DataStructures/Stack";
 import { Queue } from "../DataStructures/Queue";
 import { StackGenerator } from "./Stack";
 import { QueueGenerator } from "./Queue";
-const DATATYPES = ["LINKEDLIST", "DOUBLYLINKEDLIST", "STACK", "QUEUE"];
+import { BinarySearchTree } from "../DataStructures/BinarySearchTree";
+import { BinarySearchTreeGenerator } from "./BinarySearchTree";
+const DATATYPES = [
+  "LINKEDLIST",
+  "DOUBLYLINKEDLIST",
+  "STACK",
+  "QUEUE",
+  "BINARYSEARCHTREE",
+];
 export const PARENTHESES = /\(([^)]+)\)/;
 export const useCompiler = () => {
   const dispatch = useAppDispatch();
@@ -47,6 +55,8 @@ export const useCompiler = () => {
         errorMessege = StackGenerator(codeBlock, classInstance, i);
       } else if (classInstance instanceof Queue) {
         errorMessege = QueueGenerator(codeBlock, classInstance, i);
+      } else if (classInstance instanceof BinarySearchTree) {
+        errorMessege = BinarySearchTreeGenerator(codeBlock, classInstance, i);
       }
 
       if (errorMessege) {
@@ -72,6 +82,8 @@ const init = (codeBlock: string) => {
       return new Stack();
     case DATATYPES[3]:
       return new Queue();
+    case DATATYPES[4]:
+      return new BinarySearchTree();
     default:
       return null;
   }

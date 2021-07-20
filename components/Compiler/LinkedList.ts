@@ -18,7 +18,7 @@ export const LinkedListGenerator = (
   } else if (method === methods[1]) {
     if (match && match[1]) {
       const element = match[1].split(",");
-      if (element.length > 1 && parseInt(element[1])) {
+      if (element.length > 1 && parseInt(element[1]) > -1) {
         const messege = classInstance.insertAt(
           element[0].trim(),
           parseInt(element[1].trim())

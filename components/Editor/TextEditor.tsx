@@ -20,13 +20,14 @@ export default function TextEditor() {
 
   const handleRun = () => {
     dispatch(changePlay());
+
     const classInstance = _compiler(editor.textValue);
     console.log(classInstance);
     if (classInstance) {
       const elements = _generator(classInstance);
       dispatch(changeElements(elements));
+      dispatch(changePlay());
     }
-    dispatch(changePlay());
   };
   return (
     <div className="flex flex-1 relative">

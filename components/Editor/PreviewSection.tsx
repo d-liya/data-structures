@@ -1,9 +1,11 @@
 import { useAppSelector } from "../../redux/hooks";
 import ReactFlow from "react-flow-renderer";
 import NodeWithOutHandle from "../Nodes/NodeWithOutHandle";
+import NodeWithHandle from "../Nodes/NodeWithHandle";
 
 const customNodes = {
   noHandle: NodeWithOutHandle,
+  withHandle: NodeWithHandle,
 };
 
 export default function PreviewSection() {

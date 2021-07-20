@@ -127,6 +127,7 @@ class DoublyLinkedList {
         this.head = node;
       } else if (index === this.size) {
         this.add(element);
+        return "";
       } else {
         let it = 0;
         let curr = this.head;
@@ -135,6 +136,7 @@ class DoublyLinkedList {
           it++;
         }
         node.prev = curr?.prev;
+        curr.prev.next = node;
         node.next = curr;
       }
       this.size++;
@@ -171,6 +173,7 @@ class DoublyLinkedList {
           this.tail = newTail;
         }
       }
+      this.size--;
     }
     return "";
   }
