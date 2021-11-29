@@ -1,56 +1,48 @@
-### Templating language Demos
+### Data structure visualizer
 
-LinkedList
-node1 = Node(1)
-node2 = Node(2)
-node3 = Node(3)
-node4 = Node(4)
-node1.next(node2)
-node2.next(node3)
-node3.next(node4)
+## Motivation
 
-DoublyLinkedList
-node1 = Node(1)
-node2 = Node(2)
-node3 = Node(3)
-node4 = Node(4)
-node1.next(node2)
-node2.prev(node1)
-node2.next(node3)
-node3.prev(node2)
-node3.next(node4)
-node4.prev(node3)
+Knowledge of data structures are essential to write good code but often understanding some complex data structures can be a tedious task, so the motivation of this project is to make an easy to use user interface to help visualize data structure more effectively. 
 
-BinaryTree
-node1 = Node(1)
-node2 = Node(2)
-node3 = Node(3)
-node4 = Node(4)
-node1.left(node2)
-node1.right(node3)
-node2.right(node4)
 
-BinarySearchTree
-node1 = Node(1)
-node2 = Node(2)
-node3 = Node(3)
-node4 = Node(4)
-node2.left(node1)
-node2.right(node3)
-node3.right(node4)
+## Features 
 
-Stack
-stack = Stack()
-stack.push(1)
-stack.push(2)
-stack.push(3)
-stack.pop()
-stack.push(1)
+- Ability to create data structures without writing any code (With an easy to use user interface).
+- Ability to visualize data structures.
+- Ability to update already generated data structures.
+- Data structures included.
+      - Stack
+      - Queue
+      - LinkedList
+      - Heap
+      - Binary Tree
+      - Graph
+      - Binary Search Tree
+      - HashMap
 
-Queue
-queue = Queue()
-queue.add(1)
-queue.add(2)
-queue.add(3)
-queue.remove()
-queue.add(5)
+
+## Technology used
+
+- Typescript
+- React.js (17.0.2)
+- Next.js (11.0.1)
+- Redux
+
+
+## Why Use This
+
+- Helps understand data structures better.
+- Has a decent user interface and user experience.
+
+
+## To Contribute 
+
+- Install Node.js
+- Clone the project
+- Install node modules using 'npm i'
+- To run in development mode 'npm run dev' (visit localhost:3000)
+
+
+#### Warning ⚠️ This not yet finish (Hopefully wouldd be done by the end of this year 2021.)
+
+
