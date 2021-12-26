@@ -1,0 +1,14 @@
+name: PASK Task Management
+on:
+  push:
+    branches:
+      - "**"
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: HTTP Request Action
+        uses: fjogeleit/http-request-action@v1.8.1
+        with:
+          url: https://todo-server-one.vercel.app/api/update?id=izTVg26r87RxRGkBaYHM7c8evsy1&project=data-structures&username=d-liya
+          method: POST
